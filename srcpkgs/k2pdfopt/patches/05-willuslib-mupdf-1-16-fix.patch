@@ -1,0 +1,24 @@
+diff -r -w -u0 willuslib/wmupdfinfo.c willuslib/wmupdfinfo.c
+--- willuslib/wmupdfinfo.c   2018-11-21 10:05:22.000000000 +0100
++++ willuslib/wmupdfinfo.c       2019-08-15 11:25:41.344459233 +0200
+@@ -399 +399 @@
+-       glo->dim = fz_resize_array(ctx, glo->dim, glo->dims+1, sizeof(struct info));
++       glo->dim = fz_realloc_array(ctx, glo->dim, glo->dims+1, struct info);
+@@ -444 +444 @@
+-               glo->font = fz_resize_array(ctx, glo->font, glo->fonts+1, sizeof(struct info));
++               glo->font = fz_realloc_array(ctx, glo->font, glo->fonts+1, struct info);
+@@ -513 +513 @@
+-               glo->image = fz_resize_array(ctx, glo->image, glo->images+1, sizeof(struct info));
++               glo->image = fz_realloc_array(ctx, glo->image, glo->images+1, struct info);
+@@ -571 +571 @@
+-               glo->form = fz_resize_array(ctx, glo->form, glo->forms+1, sizeof(struct info));
++               glo->form = fz_realloc_array(ctx, glo->form, glo->forms+1, struct info);
+@@ -616 +616 @@
+-               glo->psobj = fz_resize_array(ctx, glo->psobj, glo->psobjs+1, sizeof(struct info));
++               glo->psobj = fz_realloc_array(ctx, glo->psobj, glo->psobjs+1, struct info);
+@@ -659 +659 @@
+-               glo->shading = fz_resize_array(ctx, glo->shading, glo->shadings+1, sizeof(struct info));
++               glo->shading = fz_realloc_array(ctx, glo->shading, glo->shadings+1, struct info);
+@@ -727 +727 @@
+-               glo->pattern = fz_resize_array(ctx, glo->pattern, glo->patterns+1, sizeof(struct info));
++               glo->pattern = fz_realloc_array(ctx, glo->pattern, glo->patterns+1, struct info);
